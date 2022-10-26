@@ -17,7 +17,20 @@ Future<void> main() async{
     print(error);
   });
 
+  // Future<String> delayedNameFuture=
+  //     Future.delayed(Duration(milliseconds: 3000),()=> "AMK");
+  // delayedNameFuture.then((value) => print(value));
+
+  Future<String> padcFuture = Future.value("PADC MY");
+  String padc = await padcFuture;
+  print (padc);
+
   Future<String> delayedNameFuture=
-      Future.delayed(Duration(milliseconds: 3000),()=> "AMK");
+  Future.delayed(Duration(milliseconds: 3000),()=> "AMK");
+  // String name= await delayedNameFuture;
+  // print(name);
   delayedNameFuture.then((value) => print(value));
+
+  print("Future have finished");
+
 }
